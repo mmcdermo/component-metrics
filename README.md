@@ -31,6 +31,7 @@
 ## Event Finalization
   The above event's duration will be the time until any other event.
   To change this finalization behavior, an optional config can be passed with a registered event:
+ ```
     metrics.registerEvent({
       interaction_meaning: "read",
       ...
@@ -44,7 +45,7 @@
         //You can also provide a custom function to determine whether or not an event should be finalized
         (TODO) should_finalize_event: function(unfinalized_event, new_event){ return true/false; }
      });
-
+```
 ## TODO
   * Event finalization timeouts
   * Custom function to determine event finalization
