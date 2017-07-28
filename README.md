@@ -67,11 +67,8 @@ const eventConfig = {
       "page_change" | // Finalizes on page change
       "next_event_same_component"   // Finalizes on any event with same component
                                     // OR a page change.
-     };
-metrics.registerEvent({
-      interaction_meaning: "read",
-      ...
-      }, eventConfig);
+};
+metrics.registerEvent({ interaction_meaning: "read", ... }, eventConfig);
 ```
 
 ## TODO
