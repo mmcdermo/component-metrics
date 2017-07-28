@@ -27,6 +27,24 @@
 });
 ```
 
+## Event Structure
+By default, events require the following properties:
+```
+{
+  page: "page_name",
+  component: "component_name"
+}
+```
+
+Additionally, some common optional properties are supported:
+```
+{
+  interaction_meaning: "upvote",
+  interaction_gesture: "tap",
+  represented_object_type: "user_profile",
+  represented_object_id: 44
+}
+```
 
 ## Event Finalization
   The above event's duration will be the time until any other event.
@@ -49,4 +67,3 @@ metrics.registerEvent({
 ## TODO
   * Event finalization timeouts
   * Custom function to determine event finalization
-*/
