@@ -1,7 +1,9 @@
-# Collect and report UI events that have
+# Component-Metrics
+
+## Collect and report UI events that have
   * UI Context: Events have associated pages and components
   * Temporal Context: Events report what happens before (previous_page) and after (next_page)
-                        as well as interaction duration when applicable.
+  * Inferred duration: Events have automatically calculated duration spanning from when they're registered to when they get finalized.
 
 ## Config format
 ```
