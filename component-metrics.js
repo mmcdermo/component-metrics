@@ -157,7 +157,7 @@ export default class ComponentMetrics {
 	event.next_page = newEvent.page;
 	event.next_component = newEvent.component;
 	event._finalized = true;
-	event.duration = event.duration || newEvent._event_time - event._event_time;
+	event.duration = event.duration || newEvent.time - event.time;
 
 	//Add to finalizedEvents list
 	this.finalizedEvents.push(event);
@@ -199,7 +199,7 @@ export default class ComponentMetrics {
     // Augment event with ID, timestamp, and references to previous event
     _augmentEvent(event){
 	event._event_id = this.eventCount++;
-	event._event_time = +new Date();
+	event.time = +new Date();
 	if(this.lastEvent){
 	    event.lastEventId = this.lastEvent._event_id;
 	    event.previous_page = this.lastEvent.page;
@@ -269,7 +269,7 @@ export default class ComponentMetrics {
 	this._validateEvent(event);
 	event = this._augmentEvent(event);
 	if(event._finalization_mode === FINALIZE_IMMEDIATE){
-	    this._finalizeEvent(event, {page: "", component: "", _event_id: -1, _event_time: +new Date()});
+	    this._finalizeEvent(event, {page: "", component: "", _event_id: -1, time: +new Date()});
 	}
 
 	this._finalizePreviousEvents(event);

@@ -50,8 +50,8 @@ After processing, events will be augmented with the following properties:
 ```
 {
   duration: 273,
+  time: 1709035832,
   _event_id: 50601,
-  _event_time: 1709035832,
 }
 ```
 
