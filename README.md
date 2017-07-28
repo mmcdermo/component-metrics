@@ -46,17 +46,21 @@ Additionally, some common optional properties are supported:
 }
 ```
 
-After processing, events will be augmented with the following properties:
+## Event Finalization
+Once an event is finalized, it will have additional properties:
 ```
 {
   duration: 273,
   time: 1709035832,
+  previous_page: "feed",
+  previous_component: "button_a",
+  next_page: "profile",
+  next_component: "contact_button",
   _event_id: 50601,
 }
 ```
 
-
-## Event Finalization
+## Customizing Finalization
   The above event's duration will be the time until any other event.
   To change this finalization behavior, an optional config can be passed with a registered event:
 ```
