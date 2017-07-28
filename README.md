@@ -46,6 +46,16 @@ Additionally, some common optional properties are supported:
 }
 ```
 
+After processing, events will be augmented with the following properties:
+```
+{
+  duration: 273,
+  _event_id: 50601,
+  _event_time: 1709035832,
+}
+```
+
+
 ## Event Finalization
   The above event's duration will be the time until any other event.
   To change this finalization behavior, an optional config can be passed with a registered event:
